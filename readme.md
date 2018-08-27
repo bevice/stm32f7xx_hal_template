@@ -18,7 +18,7 @@
 Или скриптом:
     
     #!/bin/bash
-    git clone --depth 1 git@github.com:bevice/stm32_hal_template.git $1
+    git clone --depth 1 git@github.com:bevice/stm32f7xx_hal_template.git $1
     cd $1
     git remote remove origin
     sed -i '' -e   "s/stm32f7_hal_template/$1/g" CMakeLists.txt

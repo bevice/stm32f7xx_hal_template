@@ -8,7 +8,7 @@
 
 ## Использование
 
-    git clone --depth 1 git@github.com:bevice/stm32_hal_template.git new_project
+    git clone --depth 1 git@github.com:bevice/stm32f7xx_hal_template.git new_project
     cd new_project 
     git submodule init
     git submodule update

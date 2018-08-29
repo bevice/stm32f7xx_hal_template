@@ -32,6 +32,10 @@ add_library(stm32f7xx_hal
         ${STM32F7XX_HAL_HEADERS}
         ${STM32F7XX_HAL_SOURCES}
         )
+target_link_libraries(stm32f7xx_hal
+        stm32f7xx_ll
+        )
+
 
 target_include_directories(stm32f7xx_hal
         PUBLIC STM32F7xx_HAL_Driver/Inc

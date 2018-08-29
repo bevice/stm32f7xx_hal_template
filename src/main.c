@@ -15,8 +15,7 @@ int main(void) {
     SCB_EnableDCache();
 
     clock_set_systick(1000);
-    clock_status_t c_status = clock_start_manual(CLOCK_SOURCE_PLL, 25000000, 25, 432, 2);
-
+    clock_start_manual(CLOCK_SOURCE_PLL, 25000000, 25, 432, 2);
     HAL_Init();
     __HAL_RCC_GPIOK_CLK_ENABLE();
     GPIO_InitTypeDef g;

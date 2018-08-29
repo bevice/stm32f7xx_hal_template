@@ -5,9 +5,15 @@
 #include "clockerf7/clock.h"
 
 void clock_was_updated(const clock_values_t *current_clocks, clock_status_t status){
+    // Сюда приедем, при каждом изменении частоты
     asm("nop");
 }
 int main(void) {
+    // Включаем OverDrive
+    HAL_PWREx_EnableOverDrive();
+    SCB_EnableICache();
+    SCB_EnableDCache();
+
     clock_set_systick(1000);
     clock_status_t c_status = clock_start_manual(CLOCK_SOURCE_PLL, 25000000, 25, 432, 2);
 
